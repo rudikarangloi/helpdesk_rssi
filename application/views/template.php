@@ -257,7 +257,7 @@
 <script type="text/javascript">
 	$("document").ready(function(){
 
-		$(".check_kirim_email").html('hello World');	
+		$(".check_kirim_email").html('-');	
 		var tipe_petugas = 0;
 		
 		setInterval(function() {
@@ -267,10 +267,13 @@
 
 				if(data['result'] == 2){
 
-					$(".check_kirim_email").html(JSON.stringify(data['chk_email_send']));				
+					//$(".check_kirim_email").html(JSON.stringify(data['chk_email_send']));		
+					$(".check_kirim_email").html('+');					
 
 				}else{
-					$(".check_kirim_email").html('Tidak kirim Email');
+					
+					$(".check_kirim_email").html('-');
+					
 				}	
 
 			},"json");

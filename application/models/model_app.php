@@ -33,11 +33,15 @@ class Model_app extends CI_Model{
         $row = $query->row_array();
 
         $max_id = $row['max_code'];
-        $max_fix = (int) substr($max_id, 1, 4);
+		$max_fix = (int) substr($max_id, 2, 3);
+        //$max_fix = (int) substr($max_id, 1, 4);
+		//RS001
+		//$max_fix = 
 
         $max_nik = $max_fix + 1;
 
-        $nik = "K".sprintf("%04s", $max_nik);
+        //$nik = "RSSI".sprintf("%04s", $max_nik);
+		$nik = "RS".sprintf("%03s", $max_nik);
         return $nik;
     }
 
